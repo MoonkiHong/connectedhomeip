@@ -226,38 +226,40 @@ function getTests()
     'TestSubscribe_OnOff',
   ];
 
-  const DoorLock = [
-    'DL_UsersAndCredentials',
-    'DL_LockUnlock',
-  ]
+  const DoorLock =
+      [
+        'DL_UsersAndCredentials',
+        'DL_LockUnlock',
+      ]
 
-  const tests = [
-    BinaryInput, //
-    BooleanState, //
-    ColorControl, //
-    DeviceDiscovery, //
-    DeviceManagement, //
-    ElectricalMeasurement, //
-    FlowMeasurement, //
-    IlluminanceMeasurement, //
-    LevelControl, //
-    MediaControl, //
-    OccupancySensing, //
-    OnOff, //
-    PressureMeasurement, //
-    PumpConfigurationControl, //
-    RelativeHumidityMeasurement, //
-    TemperatureMeasurement, //
-    Thermostat, //
-    ThermostatUserConfiguration, //
-    ThreadNetworkDiagnostics, //
-    WindowCovering, //
-    TV, //
-    Others, //
-    SoftwareDiagnostics, //
-    Subscriptions, //
-    DoorLock, //
-  ];
+      const tests
+      = [
+          BinaryInput, //
+          BooleanState, //
+          ColorControl, //
+          DeviceDiscovery, //
+          DeviceManagement, //
+          ElectricalMeasurement, //
+          FlowMeasurement, //
+          IlluminanceMeasurement, //
+          LevelControl, //
+          MediaControl, //
+          OccupancySensing, //
+          OnOff, //
+          PressureMeasurement, //
+          PumpConfigurationControl, //
+          RelativeHumidityMeasurement, //
+          TemperatureMeasurement, //
+          Thermostat, //
+          ThermostatUserConfiguration, //
+          ThreadNetworkDiagnostics, //
+          WindowCovering, //
+          TV, //
+          Others, //
+          SoftwareDiagnostics, //
+          Subscriptions, //
+          DoorLock, //
+        ];
   return tests.flat(1);
 }
 
