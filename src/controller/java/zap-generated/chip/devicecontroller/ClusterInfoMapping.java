@@ -1204,7 +1204,7 @@ public class ClusterInfoMapping {
         // Conversion from this type to Java is not properly implemented yet
         @Nullable Integer creatorFabricIndex,
         @Nullable Integer lastModifiedFabricIndex,
-        Integer nextUserIndex) {
+        @Nullable Integer nextUserIndex) {
       Map<CommandResponseInfo, Object> responseValues = new LinkedHashMap<>();
       CommandResponseInfo userIndexResponseValue = new CommandResponseInfo("userIndex", "int");
       responseValues.put(userIndexResponseValue, userIndex);
@@ -6498,6 +6498,11 @@ public class ClusterInfoMapping {
     doorLocksetCredentialCommandParams.put(
         "userStatus", doorLocksetCredentialuserStatusCommandParameterInfo);
 
+    CommandParameterInfo doorLocksetCredentialuserTypeCommandParameterInfo =
+        new CommandParameterInfo("userType", int.class);
+    doorLocksetCredentialCommandParams.put(
+        "userType", doorLocksetCredentialuserTypeCommandParameterInfo);
+
     // Populate commands
     InteractionInfo doorLocksetCredentialInteractionInfo =
         new InteractionInfo(
@@ -6510,7 +6515,8 @@ public class ClusterInfoMapping {
                       (Integer) commandArguments.get("credentialIndex"),
                       (byte[]) commandArguments.get("credentialData"),
                       (Integer) commandArguments.get("userIndex"),
-                      (Integer) commandArguments.get("userStatus"));
+                      (Integer) commandArguments.get("userStatus"),
+                      (Integer) commandArguments.get("userType"));
             },
             () -> new DelegatedSetCredentialResponseCallback(),
             doorLocksetCredentialCommandParams);
